@@ -1,7 +1,7 @@
 const services = require("../../services/note")
 
 module.exports = {
-    async createNote(req, res) {
+    async note(req, res) {
         try {
             const { note } = req.body
             const createdNote = await services.create.createNote(note)

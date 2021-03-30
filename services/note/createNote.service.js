@@ -1,9 +1,9 @@
-const notes = require("../../models/notes")
+const Note = require("../../models/Note")
 
 module.exports = {
     async createNote(note) {
         try {
-            return await notes.create({note})
+            return await Note.create({note})
         } catch(err) {
             console.log(err)
         }

@@ -1,4 +1,4 @@
 module.exports = {
-    createNote: require("./createNote.controller"),
-    deleteNote: require("./deleteNote.controller")
+    create: require("./createNote.controller"),
+    delete: require("./deleteNote.controller")
 }

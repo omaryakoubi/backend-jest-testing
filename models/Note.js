@@ -6,6 +6,8 @@ const Note = db.define('Note', {
     type: DataTypes.STRING,
     allowNull: false
   },
-});
+})
 
 Note.sync({ force: true })
+
+module.exports = Note

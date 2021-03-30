@@ -1,14 +1,14 @@
 const services = require("../../services/note")
 
 module.exports = {
-    async deleteNote(req, res) {
+    async note(req, res) {
         try {
             const { id } = req.params
             const existingNote = await services.get.noteById(id)
 
             if (existingNote) {
                 await services.delete.note(id)
-                return res.status(200).json({status: true, message:"note deleted"})
+                return res.status(200).json({status: true, message:"note deleted", data: existingNote})
             } else {
                 return res.status(200).json({status: false, message:"note not exist"})
             }

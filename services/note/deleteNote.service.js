@@ -1,9 +1,9 @@
-const notes = require("../../models/notes")
+const Note = require("../../models/Note")
 
 module.exports = {
     async note(id) {
         try {
-            return await notes.destroy({id})
+            return await Note.destroy({where : {id}})
         } catch(err) {
             console.log(err)
         }
